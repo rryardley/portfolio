@@ -12,6 +12,13 @@ h3 {
   text-align: center;
 }
 
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
 
 /***** GRID *****/
 
@@ -35,26 +42,26 @@ h3 {
 header {
   background: url('../img/plant-white-space.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
-  height: 790px;
+  background-size: cover;
+  height: 600px;
 }
 
 h1 {
   font-size: 40px;
-  padding: 15px;
+  padding: 5%;
   text-align: left;
 }
 
 h2 {
   clear: both;
   font-size: 36px;
-  padding: 200px 15px;
+  padding: 25% 5%;
   text-align: center;
 }
 
 nav {
   float: right;
-  padding: 15px 15px;
+  padding: 5% 5%;
 }
 
 nav ul li{
@@ -64,7 +71,7 @@ nav ul li{
 nav ul li a {
     color: black;
     font-size: 18px;
-    padding-left: 80px;
+    padding-left: 25px;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -74,21 +81,32 @@ nav ul li a {
 /*******PORTFOLIO*******/
 
 #portfolio {
-  height: 2100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-#portfolio .full-width {
-  height: 19%;
+#portfolio .content-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 90%;
+  text-align: center;
 }
 
-#portfolio .half-width {
-  height: 100%;
+#portfolio h3 {
+  padding-top: 0;
 }
 
-#magic8ball, #lolcatclock, #rpickings, #jausten {
-  display: block;
-  margin: auto;
-  width: 78.6%;
+
+#unplugged, #magic8ball, #lolcatclock, #rpickings, #jausten {
+  margin: 0;
+  width: 100%;
+  padding: 20px 0 5px 0;
 }
 
 #hmanifesto {
@@ -96,11 +114,16 @@ nav ul li a {
   margin-left: auto;
   margin-right: auto;
   max-height: 100%;
-  width: auto;
+  width: 50%;
+}
+
+#portfolio h4, h5 {
+  margin: 0;
 }
 
 #portfolio p {
-  padding-right: 100px;
+  width: 100%;
+  font-size: 16px;
 }
 
 
@@ -111,24 +134,19 @@ nav ul li a {
   height: 650px;
 }
 
-#about .half-width {
-  height: 100%;
-}
 
 #about h3 {
-  padding-top: 80px;
+  padding-top: 5%;
 }
 
-#about-me-photo {
+#selfphoto {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 75%;
-  transform: rotate(90deg);
+  margin: auto;
+  max-width: 50%;
 }
 
 #about p {
-  padding-right: 100px;
+  padding-right: 15%;
   text-align: left;
 }
 
@@ -143,16 +161,16 @@ nav ul li a {
 }
 
 #connect .third-width {
-  padding-top: 50px;
+  padding-top: 5%;
 }
 
 #connect h3 {
   margin: auto 0;
-  padding-top: 80px;
+  padding-top: 5%;
 }
 
 #connect h5 {
-  padding-top: 100px;
+  padding-top: 15%;
 }
 
 #connect ul li{
@@ -160,5 +178,30 @@ nav ul li a {
 }
 
 #connect ul li a {
-  padding-right: 50px;
+  padding-right: 25px;
+}
+
+/*------- Responsive Styles -------*/
+
+@media only screen and (min-width: 1200px) {
+  /* Desktop styles */
+
+  #portfolio article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #portfolio article a {
+    width: 50%;
+  }
+  #portfolio article div {
+    width: 42%;
+  }
+
+  #portfolio img {
+    padding: 0;
+  }
+
+
 }
