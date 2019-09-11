@@ -12,6 +12,13 @@ h3 {
   text-align: center;
 }
 
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
 
 /***** GRID *****/
 
@@ -35,8 +42,8 @@ h3 {
 header {
   background: url('../img/plant-white-space.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
-  height: 800px;
+  background-size: cover;
+  height: 600px;
 }
 
 h1 {
@@ -74,44 +81,55 @@ nav ul li a {
 /*******PORTFOLIO*******/
 
 #portfolio {
-  height: 2100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-#portfolio .full-width {
-  height: 19%;
-}
-
-#portfolio .half-width {
-  height: 100%;
+#portfolio .content-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 90%;
+  text-align: center;
 }
 
 #portfolio h3 {
   padding-top: 0;
 }
 
+
 #unplugged, #magic8ball, #lolcatclock, #rpickings, #jausten {
-  display: block;
-  margin: auto;
-  width: 78.6%;
+  margin: 0;
+  width: 100%;
+  padding: 20px 0 5px 0;
 }
 
 #hmanifesto {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-height: 90%;
-  width: auto;
+  max-height: 100%;
+  width: 50%;
+}
+
+#portfolio h4, h5 {
+  margin: 0;
 }
 
 #portfolio p {
-  padding-right: 15%;
+  width: 100%;
+  font-size: 16px;
 }
 
 
 /*******ABOUT ME*******/
 
 #about {
-  clear: both;
   background-color: #6E9075;
   height: 650px;
 }
@@ -152,7 +170,7 @@ nav ul li a {
 }
 
 #connect h5 {
-  padding-top: 20%;
+  padding-top: 15%;
 }
 
 #connect ul li{
@@ -161,4 +179,29 @@ nav ul li a {
 
 #connect ul li a {
   padding-right: 25px;
+}
+
+/*------- Responsive Styles -------*/
+
+@media only screen and (min-width: 1200px) {
+  /* Desktop styles */
+
+  #portfolio article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #portfolio article a {
+    width: 50%;
+  }
+  #portfolio article div {
+    width: 42%;
+  }
+
+  #portfolio img {
+    padding: 0;
+  }
+
+
 }
