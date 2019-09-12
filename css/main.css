@@ -5,19 +5,20 @@
 body {
   font-family: 'Muli', sans-serif;
   font-family: 'Ovo', serif;
+  font-size: 16px;
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 2.25em;
   text-align: center;
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 h5 {
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 /***** GRID *****/
@@ -47,35 +48,113 @@ header {
 }
 
 h1 {
-  font-size: 40px;
-  padding: 5%;
+  display: block;
+  float: left;
+  color: black;
+  text-decoration: none;
+  font-size: 3em;
+  padding: 5% 5% 0 5%;
   text-align: left;
+  margin: 0;
 }
 
-h2 {
+#logo h2 {
   clear: both;
-  font-size: 36px;
-  padding: 25% 5%;
-  text-align: center;
+  font-size: 2.25em;
+  margin: 0;
+  padding-left: 10%;
 }
 
-nav {
-  float: right;
-  padding: 5% 5%;
+#hero-right h2 {
+  clear: both;
+  font-size: 2.25em;
+  margin: 0;
+  padding: 15% 5%;
+  text-align: right;
 }
 
-nav ul li{
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+  overflow: hidden;
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px 10px;
+  margin-right: 5%;
+  font-size: 1.125em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+.menu-icon {
+  cursor: pointer;
   display: inline-block;
+  float: right;
+  padding: 10% 5%;
+  position: relative;
+  user-select: none;
 }
 
-nav ul li a {
-    color: black;
-    font-size: 18px;
-    padding-left: 25px;
-    text-decoration: none;
-    text-transform: uppercase;
+.menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 3px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 36px;
 }
 
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.menu-icon .navicon:before {
+  top: 10px;
+}
+
+.menu-icon .navicon:after {
+  top: -10px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
 
 
 /*******PORTFOLIO*******/
@@ -90,12 +169,20 @@ nav ul li a {
   padding: 0;
 }
 
-#portfolio .content-wrapper {
+#portfolio .content {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
   width: 90%;
+  padding: 0;
   text-align: center;
+}
+
+#portfolio .content-wrapper {
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 10px;
 }
 
 #portfolio h3 {
@@ -109,31 +196,46 @@ nav ul li a {
   padding: 20px 0 5px 0;
 }
 
-#hmanifesto {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-height: 100%;
-  width: 50%;
-}
-
 #portfolio h4, h5 {
   margin: 0;
 }
 
-#portfolio p {
-  width: 100%;
-  font-size: 16px;
+.content-wrapper a {
+  color: black;
+  text-decoration: none;
 }
 
 
 /*******ABOUT ME*******/
 
 #about {
-  background-color: #6E9075;
+  background-color: #93B793;
   height: 650px;
 }
 
+
+#about h3 {
+  padding-top: 5%;
+}
+
+
+#selfphoto {
+  display: block;
+  margin: auto;
+  max-width: 50%;
+  border: 5px solid black;
+  margin-top: 10%;
+}
+
+#about p {
+  padding-right: 15%;
+  text-align: left;
+}
+
+#about {
+  background-color: #93B793;
+  height: 650px;
+}
 
 #about h3 {
   padding-top: 5%;
@@ -143,6 +245,8 @@ nav ul li a {
   display: block;
   margin: auto;
   max-width: 50%;
+  border: 5px solid black;
+  margin-top: 10%;
 }
 
 #about p {
@@ -150,12 +254,10 @@ nav ul li a {
   text-align: left;
 }
 
-
-
 /*******CONNECT*******/
 
 #connect {
-  background-color: #5B6057;
+  background-color: #C7C9C8;
   height: 450px;
   text-align: center;
 }
@@ -186,20 +288,61 @@ nav ul li a {
 @media only screen and (min-width: 1200px) {
   /* Desktop styles */
 
-  #portfolio article {
+  .menu {
+    display: inline-block;
+    float: right;
+    padding: 5% 5%;
+    max-height: none;
+  }
+
+  .menu li{
+    display: inline-block;
+  }
+
+  .menu li a {
+    color: black;
+    font-size: 18px;
+    padding-left: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .menu li a:hover {
+    color: white;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  #portfolio .content-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    flex-flow: row nowrap;
   }
 
-  #portfolio article a {
-    width: 50%;
-  }
-  #portfolio article div {
-    width: 42%;
+  #portfolio .content .content-wrapper:nth-child(2n) {
+    flex-flow: row-reverse nowrap;
   }
 
-  #portfolio img {
+  #portfolio .content-wrapper a {
+    width: 100%;
+  }
+  #portfolio .content-wrapper div {
+    width: 100%;
+  }
+
+
+  .content-wrapper figure {
+    height: 400px;
+    width: 500px;
+    overflow: hidden;
+  }
+
+  .content-wrapper figure img {
+    height: auto;
+    width: 500px;
     padding: 0;
   }
 

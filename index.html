@@ -12,18 +12,21 @@
     <body>
       <header>
         <div class="full-width">
-          <div class="half-width">
+          <div class="half-width" id="logo">
             <h1>Rosemary Yardley</h1>
+            <h2>Web Designer & Developer</h2>
           </div>
-          <div class="half-width">
+          <div class="half-width" id="hero-right">
             <nav>
-              <ul>
+              <input class="menu-btn" type="checkbox" id="menu-btn" />
+              <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+              <ul class="menu">
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#connect">Connect</a></li>
               </ul>
             </nav>
-            <h2>I’m an engineer with an eye for design. I love problem solving and making beautiful user-friendly websites!</h2>
+            <h2>I’m an engineer with an eye for design. I love problem solving and making beautiful user-friendly websites that reflect and enhance your unique brand.</h2>
           </div>
         </div>
       </header>
@@ -34,8 +37,9 @@
         <section id="portfolio">
           <h3>My Portfolio</h3>
 
-          <div class="content-wrapper">
-            <article>
+          <ul class="content">
+
+            <li class="content-wrapper">
               <a href="https://rryardley.github.io/unplugged-retreat/" target="_blank">
                 <figure>
                   <img src="img/unplugged-thumbnail.png" id="unplugged" alt="Unplugged thumbnail" />
@@ -43,15 +47,14 @@
               </a>
 
               <div>
-                <h4>Unplugged Retreat Website</h4>
-                <h5>HTML & CSS from Photoshop Design Comp</h5>
-                <p>I developed this website based on a Photoshop Design Comp for my Responsive Website course. I coded both the HTML and CSS from scratch and included breakpoints for mobile, tablet, and desktop devices, so styles will adjust to the change in screen size. I used Github to host the site, click the thumbnail to check it out!</p>
+                <a href="https://rryardley.github.io/unplugged-retreat/" target="_blank">
+                  <h4>Unplugged Retreat Responsive Website</h4>
+                  <h5>HTML & CSS from Photoshop Design Comp</h5>
+                </a>
               </div>
-            </article>
-          </div>
+            </li>
 
-          <div class="content-wrapper">
-            <article>
+            <li class="content-wrapper">
               <a href="https://rryardley.github.io/rogue-pickings/" target="_blank">
                 <figure>
                   <img src="img/rogue-pickings-thumbnail.png" id="rpickings" alt="Rogue Pickings thumbnail" />
@@ -59,15 +62,14 @@
               </a>
 
               <div>
-                <h4>Rogue Pickings Website</h4>
-                <h5>HTML & CSS from Photoshop Design Comp</h5>
-                <p>I developed this website for the final project of my HTML and CSS course. I coded the site based on a Photoshop Design Comp. I coded both the HTML and CSS from scratch to match the design. I used Github to host the site, click the thumbnail to check it out!</p>
+                <a href="https://rryardley.github.io/rogue-pickings/" target="_blank">
+                  <h4>Rogue Pickings Desktop Website</h4>
+                  <h5>HTML & CSS from Photoshop Design Comp</h5>
+                </a>
               </div>
-            </article>
-          </div>
+            </li>
 
-          <div class="content-wrapper">
-            <article>
+            <li class="content-wrapper">
               <a href="https://rryardley.github.io/SkillcrushProject-JubileeAusten/" target="_blank">
                 <figure>
                   <img src="img/jubilee-austen-thumbnail.PNG" id="jausten" alt="Jubilee Austen thumbnail" />
@@ -75,15 +77,14 @@
               </a>
 
               <div>
-                <h4>Jubilee Austen Project</h4>
-                <h5>HTML 5 & CSS Website</h5>
-                <p>This is a mock portfolio website that I created for a project in the Skillcrush program. I was given some starter code and an image of what the final product should look like. I filled in the gaps and used a Photoshop Design Comp to create the website you see here. I used Github to host the site, click the thumbnail to check it out!</p>
+                <a href="https://rryardley.github.io/SkillcrushProject-JubileeAusten/" target="_blank">
+                  <h4>Jubilee Austen Desktop Website</h4>
+                  <h5>HTML 5 & CSS</h5>
+                </a>
               </div>
-            </article>
-          </div>
+            </li>
 
-          <div class="content-wrapper">
-            <article>
+            <li class="content-wrapper">
               <a href="https://rryardley.github.io/magic-8-ball/" target="_blank">
                 <figure>
                   <img src="img/magic-8-ball-thumbnail.png" id="magic8ball" alt="Magic 8 Ball thumbnail" />
@@ -91,15 +92,14 @@
               </a>
 
               <div>
-                <h4>Magic 8 Ball</h4>
-                <h5>JavaScript, HTML & CSS Project</h5>
-                <p>This was a fun project for my JavaScript course in Skillcrush. It incorporates jQuery components and combines HTML, CSS and JavaScript via the DOM. The final product is a Magic 8 Ball, where you can ask a yes or no question and get a random answer. It incorporates code from jQuery and jQueryUI libraries. I used Github to host the site, click the thumbnail to check it out!</p>
+                <a href="https://rryardley.github.io/magic-8-ball/" target="_blank">
+                  <h4>Magic 8 Ball Desktop Project</h4>
+                  <h5>JavaScript, HTML & CSS</h5>
+                </a>
               </div>
-            </article>
-          </div>
+            </li>
 
-          <div class="content-wrapper">
-            <article>
+            <li class="content-wrapper">
               <a href="https://rryardley.github.io/lolcat-clock/" target="_blank">
                 <figure>
                   <img src="img/lolcat-clock-thumbnail.png" id="lolcatclock" alt="LOLCat Clock thumbnail" />
@@ -107,28 +107,15 @@
               </a>
 
               <div>
-                <h4>LOLCat Clock</h4>
-                <h5>JavaScript, HTML & CSS Project</h5>
-                <p>This was another project for my JavaScript course in Skillcrush. To complete this project, I combined my skills in JavaScript, HTML, and CSS. The final product is a clock with drop downs where you can select what time you want different alarms to go off. Each time corresponds with a different LOLCat image. There is also a "Party Time" button that utilizes an event listener. I used Github to host the site, click the thumbnail to check it out!</p>
+                <a href="https://rryardley.github.io/lolcat-clock/" target="_blank">
+                  <h4>LOLCat Clock Desktop Project</h4>
+                  <h5>JavaScript, HTML & CSS</h5>
+                </a>
               </div>
-            </article>
-          </div>
+            </li>
 
-          <div class="content-wrapper">
-            <article>
-              <a href="https://rryardley.github.io/holstee-manifesto/" target="_blank">
-                <figure>
-                  <img src="img/holstee-thumbnail.png" id="hmanifesto" alt="Holstee Manifesto thumbnail" />
-                </figure>
-              </a>
+          </ul>
 
-              <div>
-                <h4>Holstee Manifesto</h4>
-                <h5>HTML 5 & CSS Exercise</h5>
-                <p>This project was one of the first assignments in my Skillcrush program. I was given an image of what the Holstee Manifesto should look like and coded the HTML and CSS to match the image. I used Github to host the site, click the thumbnail to check it out!</p>
-              </div>
-            </article>
-          </div>
         </section>
 
         <!--About-->
@@ -136,13 +123,13 @@
           <div class="full-width">
             <h3>About Me</h3>
             <div class="half-width">
-              <img src="img/about-me-picture.PNG" id="selfphoto" alt="About me thumbnail">
+              <img src="img/amec-photo.jpeg" id="selfphoto" alt="About me thumbnail">
             </div>
             <div class="half-width">
-              <h4>Solving problems excites me.</h4>
-              <p>I have always loved problem solving, from sudoku puzzles to physics problems, so web development was a natural path for me. Both my educational and professional backgrounds are in engineering (BS and MEng from Cornell University), and I am currently enrolled in Skillcrush's Technical Blueprint program to develop my coding skills. I am loving every minute of the program - I am a dedicated self-starter (doing this program while working as a design engineer full-time) and a fast-learner. I am a creative, out-of-the-box thinker with a high attention to detail and an eye for design. My favorite thing about web development is the combination of logic and design - being able to use both sides of my brain in one career is a dream come true! </p>
+              <h4>Hi there! Thanks for dropping by.</h4>
+              <p>I am a Web Designer and Developer with a background in engineering and art. I graduated from Cornell University with a BS and MEng in Engineering in 2014. I have taken art classes through high school, college, and post-grad life. I love designing and developing websites because it combines my love of logic and problem-solving with my passion for art and design.</p>
               <p>When I'm not seeking out more coding skills to learn, I love snuggling up with my family and binging our favorite shows, or venturing out to a local brewery for a pint! </p>
-              <p>Connect with me to learn more about what I can do for you!</p>
+              <p>I offer custom websites from scratch or from templates. I can also custom code WordPress sites for clients who wish to edit their content regularly. For those with existing sites that just need some editing, I can perform a redesign, including making a desktop site responsive (optimized for mobile and tablet). I enjoy working with clients who want to highlight and enhance their unique brand through their website. If that’s you, please get in touch!</p>
             </div>
           </div>
         </section>
@@ -153,6 +140,7 @@
             <h3>Let's Connect</h3>
             <div class="third-width">
               <h4>Contact Me</h4>
+              <p>610.533.8685</p>
               <p>RRYDesigns@gmail.com</p>
             </div>
             <div class="third-width">
